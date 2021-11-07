@@ -1,0 +1,26 @@
+type User {
+    id: Int!
+    username: String!
+    profession: Profession
+}
+
+type Profession {
+    id: Int!
+    name: String!
+}
+
+type Query {
+    servants: [User!]!
+    professions: [Profession!]!
+    raqamlar: [Int!]!
+}
+
+input NewUser {
+    username: String!
+}
+
+type Mutation {
+    createUser (input: NewUser): User
+    newProfession(name: String!): Profession 
+    #NewUser kiritilsa user qaytaradi!
+}
