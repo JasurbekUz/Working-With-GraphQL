@@ -1,0 +1,57 @@
+graphQl - facebook tomonidan yozilgan!
+
+graphQL bu - sfitsifikatsiya
+
+graphQL ni qulaylikalari
+
+	1. graphQL dan 1 ta endpoint bo'ladi
+		shu endpoint ga murojat qilamiz va Query yozmaiz
+		graphQL bizga yozgan queryimizga mos malumot qaytaradi
+
+	2. masalan: users ga murojat qilsak uning barcha fieldlari kelyapti
+	   
+	   bizga faqat userning email va user name i kerak holos qolgan fieldlari kerakmas lekin barcha fieldlarini beryapti,
+	   - biz GraphQL da biz kerakli fieldlarinigina olishimiz mumkin Query yizib
+ 
+graphQL ni serveri nima qiladi - shu queryni qanday 
+								 yozilishini inplement qiladi
+
+
+concept
+	SCHEMA (NIMANI BERAMIZ)
+	RESOLVER (QANDAY BERAMIZ)
+
+start gql app
+
+Quick start
+
+    Initialise a new go module
+
+    mkdir 1_learn
+    cd 1_learn
+    go mod init gqlapp
+
+   - Add github.com/99designs/gqlgen to your project’s tools.go
+
+    	printf '// +build tools\npackage tools\nimport _ "github.com/99designs/ gqlgen"' | gofmt > tools.go
+    
+    	go mod tidy
+
+   - Initialise gqlgen config and generate models
+
+    	go run github.com/99designs/gqlgen init
+
+   - Start the graphql server
+
+    	go run server.go
+    	
+
+More help to get started:
+
+    Getting started tutorial - a comprehensive guide to help you get started
+    Real-world examples show how to create GraphQL applications
+    Reference docs for the APIs
+
+Reporting Issues
+
+If you think you’ve found a bug, or something isn’t behaving the way you think it should, please raise an issue on GitHub.
