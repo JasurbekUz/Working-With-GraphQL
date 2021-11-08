@@ -1,0 +1,20 @@
+type Category {
+    id: Int
+    name: String!
+    classifieds: [Classified!]!
+}
+
+type Classified {
+    id: Int!
+    title: String!
+    Price: Float!
+    created_at: String!
+    category: Category!
+}
+
+type Query {
+    classifieds: [Classified!]!
+    classified(id: Int!):Classified!
+    categories: [Category!]!
+    category(id: Int!): Category!
+}
